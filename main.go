@@ -7,6 +7,15 @@ type Person struct {
 	age  int
 }
 
+func makeMap() {
+	mMap := map[string]string{"name": "John", "age": "20"}
+	if mMap["age"] == "20" {
+		delete(mMap, "age")
+	}
+	fmt.Println(mMap)
+	// fmt.Println(mMap["name"], mMap["age"])
+}
+
 func checkAge(age int) (result bool) {
 	if age >= 18 {
 		result = true
@@ -37,6 +46,8 @@ func sayWelcome() {
 }
 
 func main() {
+
+	makeMap()
 
 	var p Person
 
